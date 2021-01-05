@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "../components/Login";
 import Home from "../components/Home";
-import resource1 from "../components/Resource1";
+import asr from "../components/ASR";
 import resource2 from "../components/Resource2";
 import resource3 from "../components/Resource3";
 
@@ -31,7 +31,7 @@ const routes = [
     children: [
       { path: "resource2", component: resource2 },
       { path: "resource3", component: resource3 },
-      { path: "", component: resource1 }
+      { path: "", component: asr }
     ]
   }
 ];
