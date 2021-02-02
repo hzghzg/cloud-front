@@ -5,6 +5,8 @@ import Home from "../components/Home";
 import asr from "../components/ASR";
 import resource2 from "../components/Resource2";
 import resource3 from "../components/Resource3";
+import chinaMap from "../components/echarts/ChinaMapChart";
+import bar from "../components/echarts/bar";
 
 Vue.use(VueRouter);
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
@@ -33,6 +35,14 @@ const routes = [
       { path: "resource3", component: resource3 },
       { path: "", component: asr }
     ]
+  },
+  {
+    path: '/chinaMap',
+    component: chinaMap
+  },
+  {
+    path: '/bar',
+    component: bar
   }
 ];
 
