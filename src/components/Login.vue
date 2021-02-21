@@ -29,7 +29,7 @@ export default {
 }
 
 #main {
-  background: url("../assets/background.jpg");
+  background: url("../assets/background.png");
   height: 1100px;
   margin-top: -70px;
   background-size: cover;
