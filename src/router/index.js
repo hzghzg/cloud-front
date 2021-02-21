@@ -8,11 +8,13 @@ import resource3 from "../components/Resource3";
 import chinaMap from "../components/echarts/ChinaMapChart";
 import charts from "../components/echarts/charts";
 import map from "../components/echarts/map";
+import map1 from "../components/echarts/map1";
+import map2 from "../components/echarts/map2";
 
 Vue.use(VueRouter);
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = VueRouter.prototype.push;
-VueRouter.prototype.push = function push (location) {
+VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err);
 };
 // const loginPage = () => import('../views/login');
@@ -29,6 +31,15 @@ const routes = [
     component: map
   },
   {
+    path: "/map1",
+    name: "map1",
+    component: map1
+  }, {
+    path: "/map2",
+    name: "map2",
+    component: map2
+  },
+  {
     path: "/Login",
     name: "Login",
     component: Login
@@ -37,9 +48,9 @@ const routes = [
     path: "/home",
     component: Home,
     children: [
-      { path: "resource2", component: resource2 },
-      { path: "resource3", component: resource3 },
-      { path: "", component: asr }
+      {path: "resource2", component: resource2},
+      {path: "resource3", component: resource3},
+      {path: "", component: asr}
     ]
   },
   {
