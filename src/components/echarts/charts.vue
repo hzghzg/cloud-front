@@ -12,6 +12,7 @@
 </template>
 
 <script>
+  import '../../../vintage.js'
 
   export default {
     name: 'charts',
@@ -146,7 +147,8 @@
       },
       genScatterChart() {
         let doc = document.getElementById('scatter');
-        let barChart = this.$echarts.init(doc);
+        let barChart = this.$echarts.init(doc,'vintage');
+        // let barChart = this.$echarts.init(doc,'dark');
         let option = {
           xAxis: {
             name: '身高',
